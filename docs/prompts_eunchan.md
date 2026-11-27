@@ -95,3 +95,16 @@
 ## 16. 규칙 파일 커밋·push
 
 > 커밋하고 push
+
+- 결과: 커밋 4403b7f로 main에 push
+
+## 17. 프롬프트 파일 이름 변경 요청
+
+> 내 프롬프트 파일이름에도 따로 이름을 더 붙여야될 것 같아. prompts_뭐시기 이런식으로
+
+- 답변: "prompts_eunchan.md"
+- 결과: `docs/prompts.md` → `docs/prompts_eunchan.md`로 이름 변경, README·CONTRIBUTING 링크 수정, 팀원 파일 규칙을 `docs/prompts_영문이름.md`로 통일
+
+## 18. 이름 변경 커밋·push
+
+> 커밋하고 push

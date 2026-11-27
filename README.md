@@ -39,5 +39,5 @@
 
 ## 팀원 별 vibe coding 사용 목록
 
-- 팀원 1: [docs/prompts.md](docs/prompts.md)
-- 팀원 2: 작성 예정
+- 팀원 1: [docs/prompts_eunchan.md](docs/prompts_eunchan.md)
+- 팀원 2: `docs/prompts_영문이름.md` (작성 예정)

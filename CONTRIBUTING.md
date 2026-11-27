@@ -98,8 +98,8 @@ docs: README 설치 방법 작성
 ## 5. 프롬프트 기록 (AI 사용 로그, 20점)
 
 - 팀원마다 자기 파일에 프롬프트를 기록합니다.
-  - 팀원 1: [docs/prompts.md](docs/prompts.md)
-  - 팀원 2: `docs/prompts-member2.md` (새로 만들어 사용)
+  - 팀원 1: [docs/prompts_eunchan.md](docs/prompts_eunchan.md)
+  - 팀원 2: `docs/prompts_영문이름.md` (예: `prompts_minji.md`, 새로 만들어 사용)
 - 형식은 `## 번호. 제목` 아래에 프롬프트를 인용문(`>`)으로 적고, 필요하면 결과를 한두 줄 덧붙입니다.
 - 프롬프트 기록은 해당 기능 PR에 함께 커밋합니다. 구현 과정이 보이도록 빠짐없이 남깁니다.
 
