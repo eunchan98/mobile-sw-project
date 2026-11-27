@@ -69,7 +69,7 @@ IntakeAmount.parse("72.5")         // 섭취량 입력 검사: 1~2000g, 소수�
 - 끼니 자동 추천: 식사 시간 → `MealType`
 - 식사 기록 화면: 사진 선택(Photo Picker), 날짜·시간, 끼니, 음식 검색, 섭취량, 영양소 미리보기, 저장
 - 홈 화면: 오늘 섭취 열량과 탄·단·지, 오늘 먹은 끼니
-- 음식 데이터 약 100종으로 `foods.csv` 교체
+- ~~음식 데이터 약 100종으로 `foods.csv` 교체~~ ✅ 완료
 
 **팀원 2: 식사 조회·분석 기능** — `ui/screens/list`, `detail`, `analysis`, `settings`
 - 식사 목록 화면: 월간 달력, 날짜별 열량·끼니 수 요약, 끼니 카드
@@ -105,4 +105,5 @@ fun HomeScreen(
 
 ## 음식 데이터
 
-`app/src/main/assets/foods.csv`는 **임시 샘플 10종**이다. 제출 전에 식약처 데이터 약 100종으로 바꿔야 한다. 방법은 [food-data.md](food-data.md).
+`app/src/main/assets/foods.csv`에는 식약처 음식 데이터에서 고른 **학생식당 메뉴 100종**이 들어 있다. 만드는 방법과 값 고르는 규칙은 [food-data.md](food-data.md).
+이전 임시 샘플(10종)로 이미 설치한 앱은 **앱 데이터 삭제(또는 재설치)** 후 실행해야 새 데이터가 들어간다.

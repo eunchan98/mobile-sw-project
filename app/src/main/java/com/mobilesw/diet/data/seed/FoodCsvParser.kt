@@ -8,7 +8,7 @@ import com.mobilesw.diet.data.local.entity.FoodEntity
  * 형식 (첫 줄은 헤더, `#`으로 시작하는 줄과 빈 줄은 무시):
  * ```
  * id,name,category,kcal,carbs,protein,fat
- * 1,쌀밥,밥류,143,31.7,2.5,0.3
+ * 1,쌀밥,밥류,166,37.3,3.4,0.3
  * ```
  * 영양소는 모두 100g 기준이다. 음식 이름에는 쉼표를 쓰지 않는다.
  */
