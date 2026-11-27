@@ -76,3 +76,22 @@
 ## 13. 분담 확정 + GitHub 레포 생성 요청
 
 > 너가 분리해준대로 기능으로 분담하면서 내가 공통기반까지 만드는 걸로 하자. 깃허브 레포지토리 생성하는 것도 도와줄 수 있어?
+
+- 레포 설정 답변: 이름 "mobile-sw-project", "Public (추천)", 로컬 폴더 `C:\Users\dmack\mobile-sw-project` (한글 경로·OneDrive 회피)
+- 결과: spec.md에 역할 분담 추가, GitHub 공개 레포 생성 (https://github.com/eunchan98/mobile-sw-project), README·.gitignore·docs(spec, prompts) 초기 커밋
+
+## 14. 팀원 초대 방법 질문
+
+> add people하면 돼?
+
+- 결과: Settings → Collaborators → Add people로 초대, 팀원이 수락해야 push 가능하다고 안내
+
+## 15. 커밋·PR 규칙 요청
+
+> 깃허브 커밋규칙이나 PR 규칙도 세워줄 수 있어?
+
+- 결과: CONTRIBUTING.md(브랜치·커밋 메시지·PR·공통 파일·프롬프트 기록·테스트 규칙), `.github/pull_request_template.md` 추가, README에 링크
+
+## 16. 규칙 파일 커밋·push
+
+> 커밋하고 push

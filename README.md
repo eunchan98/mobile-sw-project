@@ -6,6 +6,7 @@
 
 - 디자인 (Figma): https://www.figma.com/design/oG8yPE1nNpDJGceqi6ueLY
 - 기능 명세: [docs/spec.md](docs/spec.md)
+- 협업 규칙 (브랜치·커밋·PR): [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ## 주요 기능
 
