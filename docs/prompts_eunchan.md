@@ -108,3 +108,34 @@
 ## 18. 이름 변경 커밋·push
 
 > 커밋하고 push
+
+## 19. 공통 기반 구현 시작
+
+> 공통 기반 시작
+
+- 진행 중 질문: "안드로이드 스튜디오로 만들고 있는거 맞지?" → Android Studio 템플릿과 같은 Gradle 구조(AGP 9.3.3, Kotlin 2.2.10, compileSdk 37)로 생성, File → Open으로 열면 됨
+- 결과 (브랜치 `feature/common-foundation`):
+  - Android 프로젝트 생성 (패키지 `com.mobilesw.diet`, Compose + Navigation + Room(KSP) + Coil)
+  - Figma 토큰 기반 테마 (Color/Type/Theme), Figma 아이콘을 벡터 드로어블로 변환 (14종)
+  - Room: FoodEntity / MealEntity / MealItemEntity, FoodDao / MealDao, AppDatabase, foods.csv 시드 (임시 샘플 10종)
+  - 저장소: FoodRepository, MealRepository / 도메인: MealType, Nutrition
+  - 공통 컴포넌트: AppTopBar, PrimaryButton/OutlineButton, SelectChip/MealTypeSelector, MealCard, AppCard
+  - 하단 탭 네비게이션 + 화면 6개 자리 표시 (A/B 담당 표시)
+  - 테스트: FoodCsvParserTest 3개, NutritionTest 3개 (단위), DaoTest 3개 (계측) 모두 통과, 에뮬레이터에서 실행·탭 이동 확인
+  - 문서: docs/foundation.md (A·B 작업 안내), docs/food-data.md (식약처 데이터 교체 방법), README 설치·실행 방법
+
+## 20. 역할 확정
+
+> 내가 공통기반 구현이랑, 데이터 수집, A를 맡을거야.
+
+- 결과: 팀원 1(본인) = 공통 기반 + 음식 데이터 수집 + A(기록 담당), 팀원 2 = B(조회·분석 담당)로 README·spec·foundation 문서 갱신
+
+## 21. 담당 표기 구체화 요청
+
+> 그냥 a, b로 적지말고 뭐 만드는지 딱딱 적어줘
+
+- 결과: README·spec·foundation의 "A/B" 표기를 팀원 1(공통 기반, 음식 데이터, 영양소 계산, 끼니 추천, 식사 기록·홈 화면)과 팀원 2(식사 목록·상세·분석·설정 화면, 집계 로직)의 구체적인 기능 목록으로 변경, 코드 주석·자리 표시 화면의 담당 표기도 수정
+
+## 22. 공통 기반 커밋·PR
+
+> 커밋하고 PR
