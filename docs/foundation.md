@@ -42,10 +42,30 @@ app/src/main/java/com/mobilesw/diet/
 | | `observeMealsBetween(from, to)` | 기간 조회: 달력, 최근 30일 분석 |
 | | `observeMeal(id)`, `deleteMeal(id)` | 식사 상세 |
 
+## 영양소 계산과 표시 (`domain/`)
+
+계산은 반올림 없이 그대로 하고, 화면에 보여줄 때만 반올림한다.
+
+```kotlin
+NutritionCalculator.forFood(food, grams = 150.0)  // 음식 하나: 100g당 값 × 섭취량 / 100
+NutritionCalculator.forItem(mealItemWithFood)     // 끼니 속 음식 항목 하나 (상세 화면 음식 행)
+NutritionCalculator.forMeal(mealWithItems)        // 한 끼 합계 (식사 카드, 상세 화면)
+NutritionCalculator.forMeals(meals)               // 여러 끼 합계 (하루 요약, 최근 30일)
+
+NutritionFormatter.kcal(n.kcal)    // "1,140"   정수 반올림 + 천 단위 쉼표
+NutritionFormatter.grams(n.carbs)  // "22.1g"   소수점 한 자리, ".0" 생략
+NutritionFormatter.macros(n)       // "탄 98g · 단 34g · 지 21g"
+
+IntakeAmount.parse("72.5")         // 섭취량 입력 검사: 1~2000g, 소수점 한 자리까지. 틀리면 null
+```
+
+- 열량은 탄·단·지로 다시 계산하지 않고 식약처 DB의 에너지(kcal) 값을 섭취량에 비례해 쓴다.
+- 반올림은 HALF_UP이며, 부동소수점 오차(예: 14.7 × 1.5 = 22.0499…)도 처리한다.
+
 ## 각자 할 일
 
 **팀원 1: 식사 기록 기능** — `ui/screens/home`, `ui/screens/record`, `assets/foods.csv`
-- 영양소 계산: `FoodEntity` + 섭취량(g) → `Nutrition` (팀원 2도 상세·분석에서 쓰므로 **가장 먼저** 만들어 공유)
+- ~~영양소 계산~~ ✅ 완료 (아래 "영양소 계산과 표시" 참고)
 - 끼니 자동 추천: 식사 시간 → `MealType`
 - 식사 기록 화면: 사진 선택(Photo Picker), 날짜·시간, 끼니, 음식 검색, 섭취량, 영양소 미리보기, 저장
 - 홈 화면: 오늘 섭취 열량과 탄·단·지, 오늘 먹은 끼니
